@@ -1,44 +1,67 @@
-<div align='center'><h2>Toxic Comment Classification Challenge</h2></div>
+<div align='center'><h2>Toxic Comment Classification </h2></div>
 
 <div align='center'><h3>Identify and classify toxic online comments</h2></div>
-<div align='center'>June 25, 2020</div>
+
 
 <br>
-<p align="center">
-  <img src="kaggle-challenge.png" width="1000"/>
-</p>
 
 ## Context
-During our year of Post Master's Degree in Big Data at Télécom Paris, we carried out a three-month project on the identification and classification of online toxic comments. <br>
-More details about Télécom Paris <a href="https://www.telecom-paris.fr/en/post-masters-degree/all-post-masters-degree/post-masters-degree-in-big-data">here</a>.
-<br>
-<br>
-This project stems from the <a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/overview">Kaggle challenge</a> of the same name, organized by <a href="https://jigsaw.google.com/">Jigsaw</a> and <a href="https://conversationai.github.io/">Conversation AI</a>. 
-<br>
-The objective of this challenge was to build a multi-headed model that’s capable of detecting different types of toxicity like threats, obscenity, insults, and identity-based hate better than Perspective’s current models.
-<br>
-More details about Perspective <a href="https://www.perspectiveapi.com/#/home">here</a>.
-<br>
-<br>
-In our study, several deep learning approaches are used and compared. Logistic regression (LR), Long Short-Term Memory Networks (LSTM), Convolutional Networks (CNN) combined with language processing techniques (NLP) and word representation methods (Word Embedding) are studied. These different approaches are evaluated using training and test sets provided by the actors of the Kaggle competition. These datasets are composed of approx 160k human labelled comments from Wikipedia Talk pages including 6 types of label : toxic, severe toxic, insult, threat, obscene and identity hate. Finally, a web application is developed and deployed to allow anyone to check the toxicity of a comment.
-<br>
+## Context
 
-
-## Key figures
-<ul>
-  <li><b>Duration</b> : 3 months from 24 March to 25 June.</li>
-  <li><b>Participants</b> : 4 students.</li>
-  <li><b>Data</b> : a train and a test set from the Kaggle competition.</li>
-  <li><b>Environment</b> : Python, Colab Pro, Keras, Dash, Heroku. 
-</ul>
+This project was completed by <b>S. Kusuma</b> during a Data Science internship at <b>Extech Digital</b> in collaboration with <b>Edu-versity</b>, from <b>01/09/2024 to 30/10/2024</b>. <br>
+More details about internship credentials can be verified from the certificate shared in the repository. <br>
+<br>
+This project is based on the <a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/overview">Kaggle Toxic Comment Classification Challenge</a>, organized by <a href="https://jigsaw.google.com/">Jigsaw</a> and <a href="https://conversationai.github.io/">Conversation AI</a>. <br>
+The aim was to build a machine learning model capable of detecting multiple types of toxic comments such as threats, obscenity, insults, and identity-based hate. <br>
+<br>
+We experimented with various Natural Language Processing (NLP) and deep learning techniques including Logistic Regression (LR), Convolutional Neural Networks (CNN), Long Short-Term Memory Networks (LSTM), and Bidirectional LSTM (Bi-LSTM). <br>
+Preprocessing techniques like text cleaning, tokenization, and word embeddings were used to enhance model performance. <br>
+<br>
+The dataset used was from Wikipedia Talk pages, containing around 160,000 human-labeled comments across six categories: toxic, severe toxic, obscene, threat, insult, and identity hate. <br>
+As part of the project, a web application was also developed to let users input comments and receive real-time toxicity predictions.
+<br>
 
 ## Results
 
 <div align='justify'>
-The final selected model is based on a bi-directional LSTM neural network architecture. <br>
-The results of this model are excellent: the AUC score obtained is 98% :trophy:. This model is therefore able to predict with great accuracy whether a comment is toxic or not, and to determine the type of toxicity. <br>
-As we participated in this competition as a "late submission", we cannot obtain a ranking. 
+The final model selected was a <b>Bidirectional LSTM (Bi-LSTM)</b> neural network. <br>
+It achieved an impressive <b>98% AUC score</b> on the validation dataset. <br>
+The model accurately predicts whether a comment is toxic and classifies the type of toxicity. <br>
+A simple web interface was also integrated, allowing real-time comment toxicity checking. <br>
 </div>
+
+## ✨ Features
+
+<ul>
+  <li>Multi-label classification of toxic comments</li>
+  <li>Detection of six types of toxicity:
+    <ul>
+      <li>Toxic</li>
+      <li>Severe toxic</li>
+      <li>Obscene</li>
+      <li>Threat</li>
+      <li>Insult</li>
+      <li>Identity hate</li>
+    </ul>
+  </li>
+  <li>Text preprocessing using NLP techniques (cleaning, tokenization)</li>
+  <li>Exploration of multiple ML/DL models: LR, CNN, LSTM, Bi-LSTM</li>
+  <li>Model evaluation using AUC metric</li>
+  <li>Interactive web interface for comment toxicity check</li>
+</ul>
+
+<br>
+
+## ⚙️ Technologies Used
+
+<ul>
+  <li><b>Languages & Tools:</b> Python, Jupyter Notebook</li>
+  <li><b>Libraries:</b> Pandas, NumPy, Matplotlib, Scikit-learn</li>
+  <li><b>NLP:</b> NLTK, Regular Expressions, Tokenizers</li>
+  <li><b>Deep Learning:</b> Keras, TensorFlow</li>
+  <li><b>Model Types:</b> Logistic Regression, CNN, LSTM, Bi-LSTM</li>
+  <li><b>Deployment:</b> Flask (for web app)</li>
+</ul>
 
 
 ## Our app
@@ -64,41 +87,6 @@ It will then be possible to open the application with the local server address `
   <img src="app.gif" width="1000"/>
 </p>
 
-## Presentation of our team
-
-<br>
-All the members are students of the Post-Master's Degree in Big Data (Promotion 2019-2020) at Telecom Paris (an IP Paris school). 
-<br>
-<br>
-Full curriculum and details of our degree <a href="https://www.telecom-paris.fr/en/post-masters-degree/all-post-masters-degree/post-masters-degree-in-big-data">here</a>.
-<br>
-<br>
-Team members :
-<br>
-<br>
-
-<table class="tg">
-  <tr>
-    <th class="tg-amwm">Name</th>
-    <th class="tg-amwm">Github</th>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Hamza AMRI</td>
-    <td class="tg-baqh"><a href="https://github.com/hamza-04">hamza-04</a></td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Camille COCHENER</td>
-    <td class="tg-baqh"><a href="http://github.com/camillecochener">camillecochener</a></td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Sophie LEVEUGLE</td>
-    <td class="tg-baqh"><a href="https://github.com/sophieleveugle">sophieleveugle</a></td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">Rodolphe SIMONEAU</td>
-    <td class="tg-baqh"><a href="https://github.com/rodolphesimoneau">rodolphesimoneau</a></td>
-  </tr>
-</table>
 
 
 
